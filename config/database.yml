@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  host: <%= ENV["DB_HOST"] || 'localhost' %>
+  port: <%= ENV["DB_PORT"] || '5432' %>
+  username: <%= ENV["DB_USERNAME"] || 'postgres'%>
+  password: <%= ENV["DB_USER_PASSWORD"]%>
+
+development:
+  <<: *default
+  database: medical_procedures_dev
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: medical_procedures_test
+
+production:
+  url: <%=ENV['DATABASE_URL'] %>
+  adapter: postgresql
+  timeout: 5000
