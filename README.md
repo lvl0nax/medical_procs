@@ -11,8 +11,7 @@
 
 ## API 
 ### Поиск и получение списка процедур - GET
-- http://localhost:3000/api/v1/medical_procedures?query=ther
-- http://localhost:3000/api/v1/medical_procedures?query=angiogr
+- https://med-procs-app.herokuapp.com/api/v1/medical_procedures?query=angiogr
 
 где `query` GET-параметр для поиска медицинской процедуры по названию
 
@@ -31,7 +30,7 @@
 вариант без сериалайзеров и прочих "красивостей". Так на данный момент быстрее отрабатывает и проще и понятней читать код.
 
 ### Создание процедуры - POST
-- http://localhost:3000/api/v1/medical_procedures
+- https://med-procs-app.herokuapp.com/api/v1/medical_procedures
 
 params: `{ title: 'some medical procedure name' }`
 
