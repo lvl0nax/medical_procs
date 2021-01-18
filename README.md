@@ -1,6 +1,8 @@
 # README
 
 ### _Парсинг процедур_ - https://en.wikipedia.org/wiki/Medical_procedure#List_of_medical_procedures
+Wiki API - https://en.wikipedia.org/w/api.php?action=query&rvprop=content&titles=Medical_procedure&format=json&prop=revisions
+
 Поскольку Википедия имеет API, хоть и скудное, было принято решение воспользоваться им, поскольку верстка может меняться. 
 Наполнить БД данными можно с помощью seed-ов - `bundle exec rake db:seed`
 
